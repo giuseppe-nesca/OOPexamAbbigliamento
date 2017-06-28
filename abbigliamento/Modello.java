@@ -2,9 +2,8 @@ package abbigliamento;
 
 public class Modello {
 	
-	String nome;
-	double costoFisso,
-		quantitaTessuto;
+	private String nome;
+	private double costoFisso,quantitaTessuto;
 
 	public Modello(String nome, double costoFisso, double quantitaTessuto) {
 		this.nome = nome;

@@ -2,9 +2,9 @@ package abbigliamento;
 
 public class Capo {
 	
-	Modello modello;
-	Materiale materiale;
-	Colore colore;
+	private Modello modello;
+	private Materiale materiale;
+	private Colore colore;
 
 	public Capo(Modello modello, Materiale materiale, Colore colore) {
 		this.modello = modello;

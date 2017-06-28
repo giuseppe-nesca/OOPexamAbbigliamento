@@ -2,8 +2,8 @@ package abbigliamento;
 
 public class Materiale {
 
-	String nome;
-	double costo; //costo al metro
+	private String nome;
+	private double costo; //costo al metro
 
 	public Materiale(String nome, double costo) {		
 		this.nome = nome;

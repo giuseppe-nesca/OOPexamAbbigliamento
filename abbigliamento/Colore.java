@@ -2,7 +2,7 @@ package abbigliamento;
 
 public class Colore {
 	
-	String nome;
+	private String nome;
 
 	public Colore(String nome) {
 		this.nome = nome;

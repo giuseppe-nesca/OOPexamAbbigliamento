@@ -5,26 +5,40 @@ import java.util.HashSet;
 
 public class Collezione {
 	
-	Collection<Capo> capiCollezione = new HashSet();
+	private Collection<Capo> capiCollezione = new HashSet<>();
 
 	public void add(Capo capo) {
-		// TODO Auto-generated method stub
-		
+		capiCollezione.add(capo);
 	}
 
 	public Collection trova(Colore colore) {
-		// TODO Auto-generated method stub
-		return null;
+		Collection<Capo>resultCollection = new HashSet<>();
+		for (Capo capo : capiCollezione) {
+			if (capo.colore.equals(colore)){
+				resultCollection.add(capo);
+			}			
+		}
+		return resultCollection;
 	}
 
 	public Collection trova(Materiale materiale) {
-		// TODO Auto-generated method stub
-		return null;
+		Collection<Capo> resultCollection = new HashSet<Capo>();
+		for (Capo capo : capiCollezione) {
+			if(capo.materiale.equals(materiale)){
+				resultCollection.add(capo);
+			}
+		}
+		return resultCollection;
 	}
 
 	public Collection trova(Modello modello) {
-		// TODO Auto-generated method stub
-		return null;
+		Collection<Capo> resultCollection = new HashSet<Capo>();
+		for (Capo capo : capiCollezione) {
+			if (capo.modello.equals(modello)) {
+				resultCollection.add(capo)
+			}
+		}
+		return resultCollection;
 	}
 
 }
