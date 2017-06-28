@@ -24,22 +24,22 @@ public class Abbigliamento {
 				StringTokenizer stringTokenizer = new StringTokenizer(buffer, ";");
 				try{
 					String modalita = stringTokenizer.nextToken();
-					if(modalita == "MOD"){
+					if(modalita.equals("MOD")){
 						String nome = stringTokenizer.nextToken(),
 								costo = stringTokenizer.nextToken(),
 								quantita = stringTokenizer.nextToken();
 						modelli.put(nome, new Modello(nome, new Double(costo), new Double(quantita)));
 					}
-					if(modalita == "COL"){
+					if(modalita .equals("COL")){
 						String nome = stringTokenizer.nextToken();
 						colori.put(nome, new Colore(nome));
 					}
-					if (modalita == "MAT") {
+					if (modalita.equals("MAT")) {
 						String nome = stringTokenizer.nextToken(),
 								costo = stringTokenizer.nextToken();
 						materiali.put(nome, new Materiale(nome, new Double(costo)));
 					}
-					if (modalita == "CAP"){
+					if (modalita.equals("CAP")){
 						String nome = stringTokenizer.nextToken(),
 								nomeModello = stringTokenizer.nextToken(),
 								nomeMateriale = stringTokenizer.nextToken(),
