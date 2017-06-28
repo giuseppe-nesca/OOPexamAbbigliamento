@@ -13,11 +13,23 @@ public class Capo {
 	}
 
 	public double prezzo() {
-		return modello.costoFisso + modello.quantitaTessuto * materiale.costo;
+		return modello.getCosto() + modello.getQuantita() * materiale.getCosto();
 	}
 
 	public String toString(){
 		return modello + " " + colore + " " + materiale;
+	}
+
+	public Colore getColore() {
+		return colore;
+	}
+	
+	public Materiale getMateriale() {
+		return materiale;
+	}
+	
+	public Modello getModello() {
+		return modello;
 	}
 	
 	@Override

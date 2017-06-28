@@ -14,7 +14,7 @@ public class Collezione {
 	public Collection trova(Colore colore) {
 		Collection<Capo>resultCollection = new HashSet<>();
 		for (Capo capo : capiCollezione) {
-			if (capo.colore.equals(colore)){
+			if (capo.getColore().getNome().equals(colore.getNome())){
 				resultCollection.add(capo);
 			}			
 		}
@@ -24,7 +24,7 @@ public class Collezione {
 	public Collection trova(Materiale materiale) {
 		Collection<Capo> resultCollection = new HashSet<Capo>();
 		for (Capo capo : capiCollezione) {
-			if(capo.materiale.equals(materiale)){
+			if(capo.getMateriale().getNome().equals(materiale.getNome())){
 				resultCollection.add(capo);
 			}
 		}
@@ -34,8 +34,8 @@ public class Collezione {
 	public Collection trova(Modello modello) {
 		Collection<Capo> resultCollection = new HashSet<Capo>();
 		for (Capo capo : capiCollezione) {
-			if (capo.modello.equals(modello)) {
-				resultCollection.add(capo)
+			if (capo.getModello().getNome().equals(modello.getNome())) {
+				resultCollection.add(capo);
 			}
 		}
 		return resultCollection;
